@@ -1,12 +1,14 @@
 import './App.css';
 
-import MyButton from '../Frontend/Components/Button/Button'
+import SearchPage from '../Frontend/Pages/Search/Search'
+
 
 function App() {
   return (
-    <div className="App">
-      <MyButton />
+    <div className="Search-Page">
+      <SearchPage/>
     </div>
   );
 }
+
 export default App;
