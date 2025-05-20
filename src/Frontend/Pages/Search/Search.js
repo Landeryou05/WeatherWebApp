@@ -1,10 +1,10 @@
-import { SearchPageContainer } from '../../Components/Container/Container';
-import SearchPageHeading from '../../Components/Header/Header'
+import { SearchPageContainer } from '../../Components/Container';
+import SearchPageHeading from '../../Components/Header';
 
 function SearchPage(){
     return(
         <SearchPageContainer>
-            <SearchPageHeading>dfsdfsd</SearchPageHeading>
+            <SearchPageHeading/>
         </SearchPageContainer>
     );
 }

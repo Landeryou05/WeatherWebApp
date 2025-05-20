@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import SearchPageHeading from "../Header/Header"
+import SearchPageHeading from "./Header";
 
 const SearchPageContainerDiv = styled.div`
     padding: 10px;  
@@ -18,7 +18,7 @@ const SearchPageContainerDiv = styled.div`
 function SearchPageContainer(){
     return(
         <SearchPageContainerDiv>
-            <SearchPageHeading />
+            <SearchPageHeading/>
         </SearchPageContainerDiv>
     );
 }
