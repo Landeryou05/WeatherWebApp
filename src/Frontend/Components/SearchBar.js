@@ -2,6 +2,6 @@ import TextField from '@mui/material/TextField';
 
 export default function SearchBar() {
   return (
-    <TextField label="Location" variant = "outlined"/> 
+    <TextField label = "Location" variant = "outlined" color = "black"/> 
   );
 }
