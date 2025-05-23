@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import SearchPageHeading from "./Header";
 import SearchBar from '../Components/SearchBar';
+import SubmitButton from "./Button";
 
 const SearchPageContainerDiv = styled.div`
     padding: 10px;  
@@ -22,6 +23,7 @@ function SearchPageContainer(){
         <SearchPageContainerDiv>
             <SearchPageHeading/>
             <SearchBar/>
+            <SubmitButton/>
         </SearchPageContainerDiv>
     );
 }
