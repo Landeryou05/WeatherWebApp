@@ -9,7 +9,7 @@ const ButtonDiv = styled.div`
 export default function SubmitButton() {
   return (
     <ButtonDiv>
-      <Button variant = "contained" style = {{textTransform: 'none'}}>Enter</Button>
+      <Button variant = "contained" style = {{textTransform: 'none'}}>Search</Button>
     </ButtonDiv>
   );
 }
