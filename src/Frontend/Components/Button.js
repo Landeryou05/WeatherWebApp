@@ -9,7 +9,11 @@ const ButtonDiv = styled.div`
 export default function SubmitButton() {
   return (
     <ButtonDiv>
-      <Button variant = "contained" style = {{textTransform: 'none'}}>Search</Button>
+      <Button onClick = {SearchClick} variant = "contained" style = {{textTransform: 'none'}}>Search</Button>
     </ButtonDiv>
   );
+}
+
+function SearchClick(){
+  console.log("hello")
 }
