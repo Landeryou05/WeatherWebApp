@@ -1,14 +1,21 @@
 import './App.css';
 
-import SearchPage from '../Frontend/Pages/Search'
+import { Routes, Route } from "react-router-dom";
+import SearchPage from "../Frontend/Pages/Search";
+import WeatherPage from "../Frontend/Pages/Weather";
+
+import { Navigate } from 'react-router-dom';
 
 
-function App() {
+export default function App() {
   return (
-    <div className="Search-Page">
-      <SearchPage/>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Navigate to="/Search" replace />} />
+
+        <Route path = "/Search" element = {<SearchPage />} />
+        <Route path = "/Weather" element = {<WeatherPage />} />
+      </Routes>
     </div>
   );
 }
-
-export default App;
