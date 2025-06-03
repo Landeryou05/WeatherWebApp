@@ -8,7 +8,7 @@ const WeatherDiv = styled.div`
 function Weather(){
     return (
         <WeatherDiv>
-            fasdfdsf
+            DISPLAY WEATHER
         </WeatherDiv>
     );
 }
