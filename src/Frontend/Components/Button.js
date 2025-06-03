@@ -2,7 +2,7 @@ import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
-
+import { WeatherAPI } from "./Weather";
 
 const ButtonDiv = styled.div`
     margin-top: 40px;
@@ -12,29 +12,28 @@ const ButtonDiv = styled.div`
 function SubmitButtonSearch() {
   const navigateWeatherPage = useNavigate();
 
-  const navigationHandler = () => {
+  const searchEventHandler = () => {
     navigateWeatherPage('/Weather');
+    WeatherAPI();
   }
 
   return (
     <ButtonDiv>
-      <Button onClick = {navigationHandler} variant = "contained" style = {{textTransform: 'none'}}>Search</Button>
+      <Button onClick = {searchEventHandler} variant = "contained" style = {{textTransform: 'none'}}>Search</Button>
     </ButtonDiv>
   );
 }
 
 function SubmitButtonWeather() {
-  const navigateWeatherPage = useNavigate();
-
-  const navigationHandler = () => {
-    navigateWeatherPage('/Search');
+  const searchEventHandler = () => {
+    WeatherAPI();
   }
 
   return (
     <ButtonDiv>
-      <Button onClick = {navigationHandler} variant = "contained" style = {{textTransform: 'none'}}>Search</Button>
+      <Button onClick = {searchEventHandler} variant = "contained" style = {{textTransform: 'none'}}>Search</Button>
     </ButtonDiv>
   );
 }
 
-export {SubmitButtonSearch, SubmitButtonWeather}
+export { SubmitButtonSearch, SubmitButtonWeather }

@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const HeaderContainer = styled.div`
     background-color: white;
-    margin-bottom: 40px;
 `;
 
 const Greeting = styled.p`
