@@ -1,7 +1,15 @@
 import TextField from '@mui/material/TextField';
 
-export default function SearchBar() {
+function SearchBarSearch() {
   return (
-    <TextField label = "Location" variant = "outlined" color = "black"/> 
+    <TextField label = "Location" variant = "outlined" color = "black"/>
   );
 }
+
+function SearchBarWeather() {
+  return (
+    <TextField label = "New Location" variant = "outlined" color = "black"/>
+  );
+}
+
+export {SearchBarSearch, SearchBarWeather}

@@ -1,7 +1,7 @@
-export default function SearchPage(){
+import { WeatherPageContainer } from '../Components/Container';
+
+export default function WeatherPage(){
     return(
-        <p>
-            weatherPage
-        </p>
+        <WeatherPageContainer/>
     );
 }

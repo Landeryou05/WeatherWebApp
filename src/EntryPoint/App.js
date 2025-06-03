@@ -11,7 +11,7 @@ export default function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Navigate to="/Search" replace />} />
+        <Route path="/" element={<Navigate to = "/Search" replace />} />
 
         <Route path = "/Search" element = {<SearchPage />} />
         <Route path = "/Weather" element = {<WeatherPage />} />

@@ -9,7 +9,7 @@ const ButtonDiv = styled.div`
     margin-bottom: 40px;
 `
 
-export default function SubmitButton() {
+function SubmitButtonSearch() {
   const navigateWeatherPage = useNavigate();
 
   const navigationHandler = () => {
@@ -22,3 +22,19 @@ export default function SubmitButton() {
     </ButtonDiv>
   );
 }
+
+function SubmitButtonWeather() {
+  const navigateWeatherPage = useNavigate();
+
+  const navigationHandler = () => {
+    navigateWeatherPage('/Search');
+  }
+
+  return (
+    <ButtonDiv>
+      <Button onClick = {navigationHandler} variant = "contained" style = {{textTransform: 'none'}}>Search</Button>
+    </ButtonDiv>
+  );
+}
+
+export {SubmitButtonSearch, SubmitButtonWeather}
