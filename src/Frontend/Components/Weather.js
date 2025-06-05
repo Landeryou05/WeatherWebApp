@@ -5,16 +5,10 @@ const WeatherDiv = styled.div`
     margin-bottom: 25px;
 `;
 
-function Weather(){
+export default function Weather(){
     return (
         <WeatherDiv>
             DISPLAY WEATHER
         </WeatherDiv>
     );
 }
-
-function WeatherAPI(){
-    console.log("fsdfsd")
-}
-
-export { Weather, WeatherAPI };

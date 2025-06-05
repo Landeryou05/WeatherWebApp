@@ -2,7 +2,7 @@ import styled from "styled-components"
 import SearchPageHeading from "./Header";
 import { SubmitButtonSearch, SubmitButtonWeather } from "./Button";
 import { SearchBarSearch, SearchBarWeather } from "../Components/SearchBar";
-import { Weather } from "./Weather";
+import Weather from "../Components/Weather";
 
 const SearchPageContainerDiv = styled.div`
     padding: 10px;  

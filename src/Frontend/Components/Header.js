@@ -14,7 +14,7 @@ const Instruction = styled.p`
     font-size: 20px;
 `;
 
-function SearchPageHeading(){
+export default function SearchPageHeading(){
     return(
         <HeaderContainer>
             <Greeting>
@@ -26,5 +26,3 @@ function SearchPageHeading(){
         </HeaderContainer>
     );
 }
-
-export default SearchPageHeading;

@@ -2,7 +2,7 @@ import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { WeatherAPI } from "./Weather";
+import APICall from '../../Backend/WeatherAPI';
 
 const ButtonDiv = styled.div`
     margin-top: 40px;
@@ -13,8 +13,10 @@ function SubmitButtonSearch() {
   const navigateWeatherPage = useNavigate();
 
   const searchEventHandler = () => {
+    const textFieldElement = document.getElementById("SearchBarSearchTextField");
+    const textFieldValue = textFieldElement.value;
+    APICall(textFieldValue);
     navigateWeatherPage('/Weather');
-    WeatherAPI();
   }
 
   return (
@@ -26,7 +28,9 @@ function SubmitButtonSearch() {
 
 function SubmitButtonWeather() {
   const searchEventHandler = () => {
-    WeatherAPI();
+    const textFieldElement = document.getElementById("SearchBarWeatherTextField");
+    const textFieldValue = textFieldElement.value;
+    APICall(textFieldValue);
   }
 
   return (
@@ -36,4 +40,4 @@ function SubmitButtonWeather() {
   );
 }
 
-export { SubmitButtonSearch, SubmitButtonWeather }
+export { SubmitButtonSearch, SubmitButtonWeather };
