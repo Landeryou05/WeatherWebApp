@@ -12,11 +12,15 @@ const ButtonDiv = styled.div`
 function SubmitButtonSearch() {
   const navigateWeatherPage = useNavigate();
 
-  const searchEventHandler = () => {
+  const searchEventHandler = async () => {
     const textFieldElement = document.getElementById("SearchBarSearchTextField");
     const textFieldValue = textFieldElement.value;
-    APICall(textFieldValue);
-    navigateWeatherPage('/Weather');
+    const temperature = await APICall(textFieldValue);
+    navigateWeatherPage('/Weather', {state: {temperature}});
+
+
+
+
   }
 
   return (
@@ -27,10 +31,16 @@ function SubmitButtonSearch() {
 }
 
 function SubmitButtonWeather() {
-  const searchEventHandler = () => {
+  const navigateWeatherPage = useNavigate();
+  const searchEventHandler = async () => {
     const textFieldElement = document.getElementById("SearchBarWeatherTextField");
     const textFieldValue = textFieldElement.value;
-    APICall(textFieldValue);
+    const temperature = await APICall(textFieldValue);
+    navigateWeatherPage('/Weather', {state: {temperature}});
+
+
+
+
   }
 
   return (

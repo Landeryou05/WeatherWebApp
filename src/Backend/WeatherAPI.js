@@ -1,5 +1,6 @@
 export default function APICall(LocationName){
-    LocationAPI(LocationName)
+    const temperature = LocationAPI(LocationName)
+    return temperature;
 }
 
 async function LocationAPI(LocationName){
@@ -11,7 +12,9 @@ async function LocationAPI(LocationName){
     const lat = data[0].lat;
     const lon = data[0].lon;
 
-    WeatherAPI(lat, lon);
+    const temperature = WeatherAPI(lat, lon);
+
+    return temperature;
 }
 
 async function WeatherAPI(lat, lon){
@@ -21,5 +24,13 @@ async function WeatherAPI(lat, lon){
     const data = await response.json();
 
     const temperature = data.main.temp;
-    console.log(temperature)
+
+    const formattedTemperature = () => {
+        let formattedTemperature = Math.round((temperature - 273.15));
+        return formattedTemperature;
+    }
+
+    //console.log(formattedTemperature());
+
+    return formattedTemperature();
 }
