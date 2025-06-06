@@ -30,7 +30,5 @@ async function WeatherAPI(lat, lon){
         return formattedTemperature;
     }
 
-    //console.log(formattedTemperature());
-
     return formattedTemperature();
 }
