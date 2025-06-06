@@ -1,34 +1,20 @@
-export default function APICall(LocationName){
-    const temperature = LocationAPI(LocationName)
-    return temperature;
-}
-
-async function LocationAPI(LocationName){
-    const APIKey = process.env.REACT_APP_WEATHER_WEB_APP_API_KEY;
-
-    const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${LocationName}&appid=${APIKey}`);
-    const data = await response.json();
-
-    const lat = data[0].lat;
-    const lon = data[0].lon;
-
-    const temperature = WeatherAPI(lat, lon);
-
-    return temperature;
-}
-
-async function WeatherAPI(lat, lon){
+export default async function WeatherAPI(lat, lon){
     const APIKey = process.env.REACT_APP_WEATHER_WEB_APP_API_KEY;
     
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIKey}`);
     const data = await response.json();
 
+    const location = data.name;
     const temperature = data.main.temp;
+    const weather = data.weather[0].main;
+    const weatherIconCode = data.weather[0].icon;
 
     const formattedTemperature = () => {
         let formattedTemperature = Math.round((temperature - 273.15));
         return formattedTemperature;
     }
 
-    return formattedTemperature();
+    const weatherDataArray = [location, formattedTemperature(), weather, weatherIconCode]
+
+    return weatherDataArray;
 }

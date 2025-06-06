@@ -2,7 +2,7 @@ import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
-import MainAPI from '../../Backend/WeatherAPI';
+import MainAPI from '../../Backend/MainAPI';
 
 const ButtonDiv = styled.div`
     margin-top: 40px;
