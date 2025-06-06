@@ -4,11 +4,25 @@ import { useLocation } from 'react-router-dom';
 const WeatherDiv = styled.div`
     padding: 25px;
     margin-bottom: 25px;
+    font-size: 25px;
 `;
 
 const WeatherIconImg = styled.img`
     max-width: auto;
-    height: 110px;
+    height: 100px;
+`;
+
+const LocationDiv = styled.div`
+    padding-bottom: 20px;
+
+`;
+
+const IconDiv = styled.div`
+    padding-bottom: 20px;
+`;
+
+const TemperatureDiv = styled.div`
+    padding-bottom: 20px;
 `;
 
 export default function Weather() {
@@ -20,17 +34,17 @@ export default function Weather() {
 
   return (
     <WeatherDiv>
-        <div>
-            {location ?? "Unavailable"}
-        </div>
-        <div>
+        <LocationDiv>
+            {location ?? "Location Unavailable"}
+        </LocationDiv>
+        <IconDiv>
             <WeatherIconImg src = {WeatherIcon(weatherIconCode)} alt = "Weather Icon"/>
-        </div>
+        </IconDiv>
+        <TemperatureDiv>
+            {temp ?? "Temperature Unavailable"}°C
+        </TemperatureDiv>
         <div>
-            {temp ?? "Unavailable"}°C
-        </div>
-        <div>
-            {weather ?? "Unavailable"}
+            {weather ?? "Weather Unavailable"}
         </div>
     </WeatherDiv>
   );
