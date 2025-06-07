@@ -10,7 +10,7 @@ export default async function WeatherAPI(lat, lon){
     const weatherIconCode = data.weather[0].icon;
 
     const formattedTemperature = () => {
-        let formattedTemperature = Math.round((temperature - 273.15));
+        let formattedTemperature = `${Math.round((temperature - 273.15))}°C`;
         return formattedTemperature;
     }
 

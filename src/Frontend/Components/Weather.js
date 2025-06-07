@@ -13,7 +13,7 @@ const WeatherIconImg = styled.img`
 `;
 
 const LocationDiv = styled.div`
-    padding-bottom: 20px;
+    padding-bottom: 25px;
 
 `;
 
@@ -30,7 +30,7 @@ export default function Weather() {
   const location = page.state?.temperature[0];
   const temp = page.state?.temperature[1];
   const weather = page.state?.temperature[2];
-  const weatherIconCode = page.state?.temperature[3]
+  const weatherIconCode = page.state?.temperature[3];
 
   return (
     <WeatherDiv>
@@ -38,21 +38,32 @@ export default function Weather() {
             {location ?? "Location Unavailable"}
         </LocationDiv>
         <IconDiv>
-            <WeatherIconImg src = {WeatherIcon(weatherIconCode)} alt = "Weather Icon"/>
+            <WeatherIconImg
+                id="WeatherIcon"
+                src={WeatherIcon(weatherIconCode)}
+                alt="Restart Application"
+                onError={(error) => {
+                    error.target.onerror = null;
+                    error.target.src = "/WeatherIcons/error.png";
+                }}
+            />
         </IconDiv>
         <TemperatureDiv>
-            {temp ?? "Temperature Unavailable"}°C
+            {temp ?? null}
         </TemperatureDiv>
         <div>
-            {weather ?? "Weather Unavailable"}
+            {weather ?? null}
         </div>
     </WeatherDiv>
   );
 }
 
 function WeatherIcon(weatherIconCode){
-    const weatherIconPath = `/WeatherIcons/${weatherIconCode}.png`;
-    
-    
-    return weatherIconPath;
+    if (weatherIconCode != null){
+        const weatherIconPath = `/WeatherIcons/${weatherIconCode}.png`;
+        return weatherIconPath; 
+    } else {
+        const weatherIconPath = `/WeatherIcons/error.png`;
+        return weatherIconPath;  
+    }
 }

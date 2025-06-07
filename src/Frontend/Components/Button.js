@@ -21,7 +21,7 @@ function SubmitButtonSearch() {
 
   return (
     <ButtonDiv>
-      <Button onClick = {searchEventHandler} variant = "contained" style = {{textTransform: 'none'}}>Search</Button>
+      <Button type = "submit" onClick = {searchEventHandler} variant = "contained" style = {{textTransform: 'none'}}>Search</Button>
     </ButtonDiv>
   );
 }
@@ -37,7 +37,7 @@ function SubmitButtonWeather() {
 
   return (
     <ButtonDiv>
-      <Button onClick = {searchEventHandler} variant = "contained" style = {{textTransform: 'none'}}>Search</Button>
+      <Button type = "submit" onClick = {searchEventHandler} variant = "contained" style = {{textTransform: 'none'}}>Search</Button>
     </ButtonDiv>
   );
 }
