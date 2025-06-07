@@ -9,14 +9,15 @@ const ButtonDiv = styled.div`
     margin-bottom: 40px;
 `
 
+// Submit button for search page (landing page)
 function SubmitButtonSearch() {
-  const navigateWeatherPage = useNavigate();
+  const navigateWeatherPage = useNavigate(); // Enables navigation across multiple pages loaded within the App.js route implementation.
 
-  const searchEventHandler = async () => {
+  const searchEventHandler = async () => { // Arrow function for event handler for API call.
     const textFieldElement = document.getElementById("SearchBarSearchTextField");
-    const textFieldValue = textFieldElement.value;
+    const textFieldValue = textFieldElement.value; // Takes value entered by the user within the search box.
     const temperature = await MainAPI(textFieldValue);
-    navigateWeatherPage('/Weather', {state: {temperature}});
+    navigateWeatherPage('/Weather', {state: {temperature}}); // Returns state (in this case, an array) to weather page.
   }
 
   return (
@@ -42,4 +43,4 @@ function SubmitButtonWeather() {
   );
 }
 
-export { SubmitButtonSearch, SubmitButtonWeather };
+export { SubmitButtonSearch, SubmitButtonWeather }; // Export functions for import from container.js.

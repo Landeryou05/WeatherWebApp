@@ -43,6 +43,7 @@ const SearchFunctionDiv = styled.div`
     justify-content: space-around;
 `;
 
+// Functions that contain the components that make the page.
 function SearchPageContainer(){
     return(
         <SearchPageContainerDiv>
@@ -67,4 +68,4 @@ function WeatherPageContainer(){
     );
 }
 
-export {SearchPageContainer, WeatherPageContainer}
+export {SearchPageContainer, WeatherPageContainer} // Export functions to be used within Search.js and Weather.js.

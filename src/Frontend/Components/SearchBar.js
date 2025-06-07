@@ -1,5 +1,6 @@
 import TextField from '@mui/material/TextField';
 
+// Functions that enables text entries.
 function SearchBarSearch() {
   return (
     <TextField id = "SearchBarSearchTextField" label = "Location" variant = "outlined" color = "black"/>
@@ -12,4 +13,4 @@ function SearchBarWeather() {
   );
 }
 
-export {SearchBarSearch, SearchBarWeather}
+export {SearchBarSearch, SearchBarWeather} // Export functions to be used within Container.js.

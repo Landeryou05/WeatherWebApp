@@ -14,6 +14,7 @@ const Instruction = styled.p`
     font-size: 20px;
 `;
 
+// Default function to render heading for search page (landing page)
 export default function SearchPageHeading(){
     return(
         <HeaderContainer>
