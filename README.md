@@ -1,7 +1,7 @@
 # Weather Web Application
 
 ## Description
-This is a react web application that allows the user to enter a location, then displays information based on input through 2 APIs (both [OpenWeatherMap](https://openweathermap.org/)).
+- This is a react web application that allows the user to enter a location, then displays information based on input through 2 APIs (both [OpenWeatherMap](https://openweathermap.org/)).
 
 ## Prerequisites
 - Node.js (v14 or later).
