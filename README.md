@@ -3,6 +3,11 @@
 ## Description
 - This is a react web application that allows the user to enter a location, then displays information based on input through 2 APIs (both [OpenWeatherMap](https://openweathermap.org/)).
 
+<img src="/public/ReadmeImages/1.jpg" alt="Description" width="300"/>
+<img src="/public/ReadmeImages/2.jpg" alt="Description" width="300"/>
+<img src="/public/ReadmeImages/3.jpg" alt="Description" width="300"/>
+
+
 ## Prerequisites
 - Node.js (v14 or later).
 - npm.
